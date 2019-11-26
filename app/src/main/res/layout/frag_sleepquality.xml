@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.de.rocket.ue.layout.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#38a9f9"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.yhd.sleepquality.SleepQualityView
+        android:background="@color/colorWhite"
+        android:id="@+id/slv"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_heightPercent="35%h"
+        app:sq_marginTopRatio="0.15"/>
+
+    <com.de.rocket.ue.layout.PercentLinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/ic_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="5"
+            android:layout_marginBottom="20dp"
+            android:min="1"
+            app:layout_widthPercent="70%w"/>
+
+        <Button
+            android:id="@+id/bt_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rocket_round_rocket_pd10"
+            android:textColor="@color/rocket_cl_white"
+            android:text="更新数据"/>
+
+    </com.de.rocket.ue.layout.PercentLinearLayout>
+
+</com.de.rocket.ue.layout.PercentRelativeLayout>
