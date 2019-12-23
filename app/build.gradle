@@ -63,6 +63,12 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 dependencies {
     /* ******* 统一基础包 ******** */
     api fileTree(dir: 'libs', include: ['*.jar'])
@@ -73,6 +79,7 @@ dependencies {
     /* ******* 工程依赖 ******** */
     //api 'com.github.yinhaide:HDSleepQuality:0.0.1'
     api project(':sleepquality')
-    // 架构包,单Activity多Fragment框架(https://github.com/yinhaide/HDRocket),非常值得推荐学习~
-    api 'com.github.yinhaide:HDRocket:0.0.4'
+    // 架构包,单Activity多Fragment框架(https://github.com/yinhaide/HDRocket)
+    //api 'com.github.yinhaide:HDRocket:0.0.4'
+    api(name: library.rocket, ext: 'aar')
 }
